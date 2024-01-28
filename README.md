@@ -9,7 +9,9 @@ Building the project with Docker
 ### Development
 
 ```sh
-docker-compose up --build
+docker-compose -f docker-compose-dev.yml up
+docker-compose -f docker-compose-dev.yml up --build
+docker-compose -f docker-compose-dev.yml down
 ```
 
 ### Production
