@@ -4,9 +4,13 @@ A React web application that is deployed via Docker.
 
 ## Build
 
-Building the project with Docker
+These are the instructions for building the project with Docker.
+
+**Note:** Local builds should be accessible via: <http://localhost:8080>
 
 ### Development
+
+Use Docker compose for a local HMR server:
 
 ```sh
 docker-compose -f docker-compose-dev.yml up
@@ -14,13 +18,15 @@ docker-compose -f docker-compose-dev.yml up --build
 docker-compose -f docker-compose-dev.yml down
 ```
 
-### Production
+Use Docker compose for a local prod server:
+
+### Local production
 
 ```sh
-dicker build .
+docker-compose -f docker-compose-local.yml up
+docker-compose -f docker-compose-local.yml up --build
+docker-compose -f docker-compose-local.yml down
 ```
-
-Navigate to: <http://localhost:8080/>
 
 ## Continuous integration
 
@@ -30,7 +36,7 @@ See: <https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/lear
 
 ### GitHub Actions secrets
 
-https://github.com/rmkane/docker-react/settings/secrets/actions
+Secrets: <https://github.com/rmkane/docker-react/settings/secrets/actions>
 
 ### AWS secrets
 
